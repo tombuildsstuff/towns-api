@@ -2,13 +2,10 @@ import Kitura
 import KituraNet
 import KituraSys
 
+let port = 8090
 
 let router = Router()
+Routes.configure(router)
 
-router.use("/*", middleware: RequestLogger())
-
-router.get("/", handler: HomeController.Index)
-
-let port = 8090
 let server = HttpServer.listen(port, delegate: router)
 Server.run()
