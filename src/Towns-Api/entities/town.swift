@@ -6,8 +6,8 @@ struct Town {
 
   func toJson() -> Json {
     return [
-      "name": "Hello",
-      "country": "World"
+      "name": Json(name),
+      "country": Json(country)
     ]
   }
 }
